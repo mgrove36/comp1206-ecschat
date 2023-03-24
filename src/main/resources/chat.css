@@ -1,0 +1,25 @@
+.messages {
+    -fx-line-spacing: 2px;
+    -fx-padding: 8px;
+}
+.messages > .message-container > .timestamp {
+    -fx-font-style: italic;
+    -fx-fill: #495961;
+}
+.messages > .message-container > .username {
+    -fx-font-weight: bold;
+}
+.chat-container {
+    -fx-border-radius: 32px;
+    -fx-border-color: #E1E8EC;
+    -fx-border-width: 1px;
+    -fx-background-radius: 32px;
+    -fx-padding: 16px;
+}
+.my-nickname-container, .edit-nickname-input {
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+.my-nickname-container > Text, .edit-nickname-input {
+    -fx-font-size: 1.2em;
+}

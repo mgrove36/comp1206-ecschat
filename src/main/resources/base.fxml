@@ -6,11 +6,8 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -24,7 +21,6 @@
          <children>
           <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="active" text="Chat" />
             <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Game" />
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Whiteboard" />
             <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false">
                <graphic>
                   <CheckBox fx:id="audioEnabled" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="Sound" />
@@ -39,7 +35,7 @@
             <String fx:value="left-menu" />
          </styleClass>
       </VBox>
-      <StackPane fx:id="chatContainerStackPane" prefHeight="150.0" prefWidth="200.0">
+      <StackPane fx:id="mainStackPane" prefHeight="150.0" prefWidth="200.0">
          <children>
             <VBox maxHeight="1.7976931348623157E308" spacing="4.0" styleClass="chat-container">
                <children>
@@ -68,33 +64,6 @@
                      </children>
                   </HBox>
                   <Separator prefWidth="200.0" />
-                  <ScrollPane fx:id="messagesContainer" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" styleClass="messages-container" vvalue="1.0" VBox.vgrow="ALWAYS">
-                     <content>
-                        <VBox fx:id="messages" maxWidth="1.7976931348623157E308" styleClass="messages">
-                           <children>
-                              <Label fx:id="noMessagesYetText" text="No messages yet." wrapText="true" />
-                           </children>
-                        </VBox>
-                     </content>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </ScrollPane>
-                  <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" spacing="4.0">
-                     <children>
-                        <TextField fx:id="messageToSend" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#handleMessageToSendKeypress" promptText="Type a message..." HBox.hgrow="ALWAYS">
-                           <styleClass>
-                              <String fx:value="message-input" />
-                              <String fx:value="text-field-no-outline" />
-                           </styleClass>
-                        </TextField>
-                        <Button mnemonicParsing="false" styleClass="button-primary" text="Send" />
-                     </children>
-                     <styleClass>
-                        <String fx:value="send-message-container" />
-                        <String fx:value="outline-section" />
-                     </styleClass>
-                  </HBox>
                </children>
             </VBox>
             <ImageView fx:id="showRightPanel" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#toggleRightPanel" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER_RIGHT">
@@ -131,66 +100,7 @@
             </ImageView>
          </children>
       </StackPane>
-      <VBox fx:id="rightPanel" prefHeight="200.0" prefWidth="100.0" spacing="4.0">
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h3" text="Connected Users" />
-            <HBox alignment="CENTER_LEFT" spacing="4.0" styleClass="outline-section">
-               <children>
-                  <TextField fx:id="usersSearchField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Search" styleClass="text-field-no-outline" HBox.hgrow="ALWAYS" />
-                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@search_icon.png" />
-                     </image>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ImageView>
-               </children>
-            </HBox>
-            <VBox>
-               <children>
-                  <VBox fx:id="myUsernameContainer" styleClass="outline-section">
-                     <children>
-                        <HBox fx:id="myUsernameTextContainer" alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" onMouseClicked="#showMyUsernameInput" spacing="4.0">
-                           <children>
-                              <VBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" styleClass="my-nickname-container" HBox.hgrow="ALWAYS">
-                                 <children>
-                                    <Text fx:id="myUsernameText" strokeType="OUTSIDE" strokeWidth="0.0" text="Guest" />
-                                 </children>
-                              </VBox>
-                              <ImageView id="editMyNickname" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@pen_icon.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                           </children>
-                        </HBox>
-                        <HBox id="editMyNickname" fx:id="myUsernameInputContainer" alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" spacing="4.0">
-                           <children>
-                              <TextField fx:id="myUsernameInput" maxHeight="1.7976931348623157E308" onKeyPressed="#handleUsernameKeypress" text="Guest" HBox.hgrow="ALWAYS">
-                                 <styleClass>
-                                    <String fx:value="edit-nickname-input" />
-                                    <String fx:value="text-field-no-outline" />
-                                 </styleClass>
-                              </TextField>
-                              <ImageView id="saveMyNickname" fitHeight="16.0" fitWidth="16.0" onMouseClicked="#hideMyUsernameInput" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@check_icon.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-               </children>
-            </VBox>
-         </children>
+      <VBox fx:id="rightPanel" prefHeight="200.0" prefWidth="100.0" spacing="8.0">
          <styleClass>
             <String fx:value="menu" />
             <String fx:value="right-menu" />

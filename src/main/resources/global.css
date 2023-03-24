@@ -2,17 +2,35 @@
 root {
     display: block;
 }
+.root {
+    -fx-border-width: 16px 8px;
+    -fx-border-color: #ffffff;
+    -fx-background-color: #ffffff;
+}
 .root > * {
-    -fx-padding: 4px;
-    -fx-background-color:#ffffff;
+    -fx-padding: 4px 8px;
+    -fx-background-color: transparent;
+    -fx-border-width: 0px;
 }
 * {
     -fx-font-family: "Roboto";
 }
 
+/* scroll panes */
+.scroll-pane {
+    -fx-background: #ffffff;
+    -fx-border-color: #ffffff;
+}
+.scroll-pane:selected, .scroll-pane:focused {
+    -fx-border-color: #ffffff;
+}
+.scroll-pane .viewport {
+    -fx-padding: 10px;
+}
+
 /* menus */
 .menu {
-    -fx-padding: 32px 0 0 0;
+    -fx-padding: 32px 0px 32px 0px;
 }
 .menu > .button {
     -fx-text-alignment: left;
@@ -45,6 +63,7 @@ root {
     -fx-border-color: #E1E8EC;
     -fx-border-radius: 8px;
     -fx-background-radius: 8px;
+    -fx-cursor: hand;
 }
 .button.active {
     -fx-background-color: #E1E8EC;
@@ -59,7 +78,7 @@ root {
     -fx-border-color: #005C84;
 }
 .text-field, .button {
-    -fx-padding: 12px;
+    -fx-padding: 8px 12px;
 }
 .text-field {
     -fx-background-color: transparent;
@@ -68,9 +87,18 @@ root {
     -fx-border-radius: 8px;
     -fx-background-radius: 8px;
     -fx-padding: 12px;
+    -fx-font-family: Roboto;
+}
+.text-field-no-outline {
+    -fx-background-color: transparent;
+    -fx-border-width: 0px;
+    -fx-padding: 0px;
 }
 
 /* headings */
+.h1 {
+    -fx-font-size: 3em;
+}
 .h2 {
     -fx-font-size: 2em;
 }
@@ -90,4 +118,38 @@ root {
     -fx-border-color: #E1E8EC;
     -fx-border-radius: 8px;
     -fx-padding: 12px;
+}
+
+/* italics */
+.italic {
+    -fx-font-style: italic;
+}
+
+/* urls */
+Hyperlink.hyperlink {
+    -fx-underline: true;
+    -fx-text-fill: #005C84;
+}
+
+/* split pane dividers */
+.split-pane > .split-pane-divider {
+    -fx-padding: 0px;
+}
+
+/* progress bars */
+.progress-bar {
+    -fx-border-width: 0px;
+    -fx-background-radius: 8px;
+    -fx-accent: #005C84;
+}
+.progress-bar > .bar {
+    -fx-background-insets: 0;
+    -fx-background-radius: 16px;
+}
+.progress-bar > .track {
+    -fx-background-radius: 8px;
+    -fx-background-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-radius: 16px;
+    -fx-border-color: #E1E8EC;
 }
