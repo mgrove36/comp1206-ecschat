@@ -4,6 +4,8 @@ Chat application with built-in game built as part of COMP1206 at the University 
 
 This application is a Maven JavaFX project with a modern interface and compatability with multiple platforms.
 
+Note that this application will only run on the University of Southampton network.
+
 ## Showcase
 
 ![Login screen](screenshots/login.png "Login screen")
