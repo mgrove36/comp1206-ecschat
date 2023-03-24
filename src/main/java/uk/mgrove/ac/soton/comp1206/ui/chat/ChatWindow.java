@@ -1,4 +1,4 @@
-package uk.mgrove.ac.soton.comp1206.ui;
+package uk.mgrove.ac.soton.comp1206.ui.chat;
 
 import javafx.animation.FadeTransition;
 import javafx.application.Platform;
@@ -17,6 +17,9 @@ import javafx.scene.text.Text;
 import javafx.util.Duration;
 import uk.mgrove.ac.soton.comp1206.App;
 import uk.mgrove.ac.soton.comp1206.network.Communicator;
+import uk.mgrove.ac.soton.comp1206.ui.BaseWindow;
+import uk.mgrove.ac.soton.comp1206.ui.chat.Message;
+import uk.mgrove.ac.soton.comp1206.ui.chat.UserList;
 import uk.mgrove.ac.soton.comp1206.utility.Utility;
 
 import java.awt.event.ActionEvent;

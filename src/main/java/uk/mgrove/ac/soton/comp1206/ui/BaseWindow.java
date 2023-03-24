@@ -20,6 +20,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import uk.mgrove.ac.soton.comp1206.App;
 import uk.mgrove.ac.soton.comp1206.network.Communicator;
+import uk.mgrove.ac.soton.comp1206.ui.chat.ChatWindow;
 
 import java.util.Arrays;
 

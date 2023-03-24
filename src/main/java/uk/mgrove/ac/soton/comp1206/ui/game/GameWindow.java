@@ -1,31 +1,20 @@
-package uk.mgrove.ac.soton.comp1206.ui;
+package uk.mgrove.ac.soton.comp1206.ui.game;
 
 import javafx.application.Platform;
-import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.control.SplitPane;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import uk.mgrove.ac.soton.comp1206.App;
 import uk.mgrove.ac.soton.comp1206.network.Communicator;
-import uk.mgrove.ac.soton.comp1206.utility.Utility;
+import uk.mgrove.ac.soton.comp1206.ui.BaseWindow;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package uk.mgrove.ac.soton.comp1206.ui;
+package uk.mgrove.ac.soton.comp1206.ui.game;
 
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;

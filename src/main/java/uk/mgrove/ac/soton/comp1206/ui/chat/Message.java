@@ -1,4 +1,4 @@
-package uk.mgrove.ac.soton.comp1206.ui;
+package uk.mgrove.ac.soton.comp1206.ui.chat;
 
 import javafx.scene.control.Hyperlink;
 import javafx.scene.text.Text;

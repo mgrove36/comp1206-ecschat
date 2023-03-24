@@ -1,4 +1,4 @@
-package uk.mgrove.ac.soton.comp1206.ui;
+package uk.mgrove.ac.soton.comp1206.ui.game;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;

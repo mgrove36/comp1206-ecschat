@@ -1,4 +1,4 @@
-package uk.mgrove.ac.soton.comp1206.ui;
+package uk.mgrove.ac.soton.comp1206.ui.chat;
 
 /**
  * Interface for listeners that handle new messages being received by the Communicator class

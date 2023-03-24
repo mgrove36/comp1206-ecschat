@@ -1,4 +1,4 @@
-package uk.mgrove.ac.soton.comp1206.ui;
+package uk.mgrove.ac.soton.comp1206.ui.chat;
 
 import javafx.animation.FadeTransition;
 import javafx.beans.property.IntegerProperty;
@@ -6,8 +6,7 @@ import javafx.beans.property.StringProperty;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import uk.mgrove.ac.soton.comp1206.ui.chat.User;
 
 import java.util.ArrayList;
 import java.util.Comparator;
